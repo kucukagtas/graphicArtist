@@ -1,0 +1,679 @@
+@use "variables";
+
+// ==========================================
+// TABLETS & SMALL LAPTOPS (max-width: 992px)
+// ==========================================
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+    padding: 0 1.2rem;
+  }
+
+  // Header
+  #header {
+    &__home {
+      .header-content {
+        max-width: 680px;
+        padding: 2.5rem 2rem;
+
+        h1,
+        .greeting {
+          font-size: 2.8rem;
+        }
+
+        .typewrite {
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }
+
+  // Home Grids
+  #home {
+    &__a .skills {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.3rem;
+    }
+
+    &__b .profile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__c .process {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1.5rem;
+    }
+  }
+
+  // Gallery
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+  }
+
+  // About
+  #about {
+    &-c .about-logos {
+      gap: 2rem;
+    }
+  }
+}
+
+// ==========================================
+// TABLETS & LARGE PHONES (max-width: 768px)
+// ==========================================
+@media (max-width: 768px) {
+  // Global Typography & Containers
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .lead {
+    font-size: 1.05rem !important;
+    margin-bottom: 1.4rem !important;
+    word-spacing: normal !important;
+    line-height: 1.6;
+  }
+
+  // Navigation
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+
+    &__logo {
+      width: 52px;
+      height: 52px;
+    }
+
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.3rem;
+      padding: 0;
+
+      li {
+        padding: 0.45rem 0.8rem;
+
+        a {
+          font-size: 0.92rem;
+          padding: 0.35rem 0.2rem;
+        }
+      }
+    }
+  }
+
+  // Header
+  #header {
+    &__home {
+      min-height: auto;
+      padding-bottom: 3rem;
+      background-position: center;
+
+      .header-content {
+        margin: 2rem auto;
+        padding: 2.2rem 1.6rem;
+        max-width: 90%;
+        border-radius: 18px;
+
+        h1,
+        .greeting {
+          font-size: 2.3rem;
+        }
+
+        .typewrite {
+          font-size: 1.8rem;
+        }
+
+        .btn-light {
+          padding: 0.8rem 2rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &__inner {
+      height: auto;
+      min-height: 6.5rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+
+  // Home Sections
+  #home {
+    &__a .skills {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+
+    &__b .profile {
+      grid-template-columns: repeat(2, 1fr);
+
+      div {
+        padding: 2.2rem 1rem;
+      }
+
+      li.number {
+        font-size: 2rem;
+      }
+
+      li.title {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__c .process {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1.2rem;
+    }
+  }
+
+  // Gallery
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+
+    .item__image img {
+      height: 260px;
+    }
+  }
+
+  // About
+  #about {
+    &-a {
+      .info {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+
+        &__image {
+          height: 320px;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        &__bio {
+          padding: 1.8rem 1.5rem;
+        }
+      }
+    }
+
+    &-b {
+      #progress-bars {
+        padding: 0 0.5rem;
+      }
+    }
+
+    &-c {
+      display: block;
+
+      .about-logos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+    }
+
+    &-d {
+      .references p {
+        min-height: auto;
+        padding: 1.1rem;
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  // Contact
+  #contact {
+    &-a {
+      .form-fields {
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message"
+          "button";
+        gap: 1rem;
+      }
+    }
+
+    &-b {
+      .contact-info {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+      }
+    }
+  }
+
+  // Footer
+  #main-footer {
+    height: auto;
+    min-height: 5.5rem;
+    padding: 1.2rem 0;
+
+    .footer-content {
+      flex-direction: column;
+      height: auto;
+      gap: 0.8rem;
+      text-align: center;
+
+      .social {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+// ==========================================
+// MOBILE HANDSETS (max-width: 576px)
+// ==========================================
+@media (max-width: 576px) {
+  // Global Layout & Spacing
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .border-bottom {
+    margin: 0 auto 0.8rem auto;
+  }
+
+  .lead {
+    font-size: 0.95rem !important;
+    margin-bottom: 1.2rem !important;
+    line-height: 1.55;
+  }
+
+  .py-2 {
+    padding: 1.8rem 0;
+  }
+
+  .py-3 {
+    padding: 2rem 0;
+  }
+
+  .py-4 {
+    padding: 2.2rem 0;
+  }
+
+  // Navigation
+  .main-nav {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    gap: 0.5rem;
+
+    &__logo {
+      width: 48px;
+      height: 48px;
+    }
+
+    &__items {
+      li {
+        padding: 0.35rem 0.6rem;
+
+        a {
+          font-size: 0.85rem;
+          padding: 0.3rem 0.2rem;
+        }
+      }
+    }
+  }
+
+  // Header
+  #header {
+    &__home {
+      min-height: auto;
+      padding: 0.5rem 0 2rem;
+
+      .header-content {
+        margin: 1rem auto;
+        padding: 1.6rem 1.1rem;
+        width: 95%;
+        border-radius: 16px;
+
+        h1,
+        .greeting {
+          font-size: 1.7rem;
+        }
+
+        .typewrite {
+          font-size: 1.35rem;
+          display: block;
+          margin-top: 0.3rem;
+        }
+
+        .btn-light {
+          padding: 0.75rem 1.8rem;
+          font-size: 0.92rem;
+        }
+      }
+    }
+
+    &__inner {
+      height: auto;
+      min-height: 6rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+
+  // Home Sections
+  #home {
+    &__a {
+      .skills {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+
+        div {
+          padding: 1.3rem 1.1rem;
+          border-bottom: none;
+        }
+      }
+    }
+
+    &__b {
+      .profile {
+        grid-template-columns: repeat(2, 1fr);
+
+        div {
+          padding: 1.6rem 0.6rem;
+        }
+
+        li.number {
+          font-size: 1.7rem;
+        }
+
+        li.title {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &__c {
+      .process {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+
+        &__icon {
+          width: 100px;
+          height: 100px;
+        }
+
+        &__step {
+          width: 32px;
+          height: 32px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // Gallery (Touch-Friendly Layout)
+  .items {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .item {
+      // Disable desktop hover sweep on mobile touchscreens
+      &::after {
+        display: none;
+      }
+
+      // Elegant gradient overlay to keep text readable on touchscreens
+      &__image {
+        a {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 52%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+            pointer-events: none;
+          }
+        }
+
+        img {
+          height: 250px;
+        }
+      }
+
+      // Permanently readable mobile caption
+      &__text {
+        opacity: 1;
+        transform: translateY(0);
+        top: auto;
+        bottom: 0;
+        height: auto;
+        padding: 0.8rem 1rem;
+        justify-content: flex-start;
+        text-align: left;
+
+        &_wrap {
+          padding: 0;
+        }
+
+        &__category {
+          font-size: 0.72rem;
+          color: variables.$primary-color;
+          margin-bottom: 0.2rem;
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        &__title {
+          font-size: 1.15rem;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+
+  // About
+  #about {
+    &-a {
+      .info {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+
+        &__image {
+          height: 260px;
+        }
+
+        &__bio {
+          padding: 1.3rem 1.1rem;
+
+          h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+          }
+
+          p {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+
+    &-b {
+      .progress {
+        height: 18px;
+        margin-bottom: 1.1rem;
+      }
+
+      #progress-bars h4 {
+        font-size: 0.95rem;
+      }
+    }
+
+    &-c {
+      display: block;
+
+      .about-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+
+        img {
+          max-width: 100px;
+          max-height: 38px;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &-d {
+      .references {
+        p {
+          font-size: 0.92rem;
+          padding: 0.9rem;
+          line-height: 1.5;
+        }
+
+        ul img {
+          width: 46px;
+          height: 46px;
+        }
+
+        ul li:last-child {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  // Contact
+  #contact {
+    &-a {
+      .form-fields {
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message"
+          "button";
+        gap: 0.9rem;
+        margin-bottom: 1.5rem;
+
+        .input {
+          padding: 0.75rem 0.9rem;
+          font-size: 0.95rem;
+        }
+
+        .message {
+          height: 140px;
+        }
+
+        .btn-dark {
+          padding: 0.8rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &-b {
+      .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+
+        div {
+          padding-bottom: 1.2rem;
+          border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
+
+          &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+
+          h3 {
+            font-size: 1.15rem;
+          }
+
+          p {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Footer
+  #main-footer {
+    height: auto;
+    min-height: 6rem;
+    padding: 1.2rem 0;
+
+    .footer-content {
+      flex-direction: column;
+      height: auto;
+      gap: 0.7rem;
+
+      p {
+        font-size: 0.85rem;
+      }
+
+      .social {
+        .fab {
+          width: 2.3rem;
+          height: 2.3rem;
+          font-size: 1.05rem;
+          margin: 0 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+// ==========================================
+// SMALL MOBILE / COMPACT (max-width: 380px)
+// ==========================================
+@media (max-width: 380px) {
+  .main-nav__items {
+    li {
+      padding: 0.25rem 0.4rem;
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  #header__home {
+    .header-content {
+      padding: 1.4rem 0.85rem;
+
+      h1,
+      .greeting {
+        font-size: 1.45rem;
+      }
+
+      .typewrite {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  #home__b .profile {
+    grid-template-columns: 1fr;
+
+    div {
+      padding: 1.4rem 1rem;
+    }
+  }
+
+  #about-c .about-logos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "graphic-artist-portfolio",
+  "version": "1.0.0",
+  "description": "Ao Tanaka — Graphic Artist, Printmaker & Visual Designer Portfolio Website",
+  "main": "public/index.html",
+  "scripts": {
+    "watch": "sass --watch --style=compressed scss:public/css",
+    "build": "sass --style=compressed scss:public/css"
+  },
+  "keywords": [
+    "portfolio",
+    "graphic-artist",
+    "printmaking",
+    "sass",
+    "scss",
+    "lightbox2",
+    "owl-carousel"
+  ],
+  "author": "Muhammed Küçükağtaş",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "lightbox2": "^2.11.5",
+    "owl.carousel": "^2.3.4"
+  },
+  "devDependencies": {
+    "sass": "^1.104.1"
+  }
+}
