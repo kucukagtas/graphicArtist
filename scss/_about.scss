@@ -1,0 +1,150 @@
+@use "variables";
+
+#about {
+  &-a {
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      align-items: start;
+      text-align: left;
+
+      &__image {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        border: 1px solid variables.$light-color;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      &__bio {
+        border: 1px solid variables.$light-color;
+        padding: 2rem;
+        border-radius: 8px;
+        background-color: variables.$white-color;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+
+        h3 {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+          color: variables.$mindark-color;
+        }
+
+        p {
+          margin-bottom: 1rem;
+          color: #444;
+          line-height: 1.7;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-b {
+    color: variables.$white-color;
+
+    #progress-bars {
+      max-width: 800px;
+      margin: 2rem auto 0;
+      text-align: left;
+
+      h4 {
+        font-size: 1.05rem;
+        margin-bottom: 0.4rem;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .progress {
+      height: 22px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      margin-bottom: 1.4rem;
+      overflow: hidden;
+
+      div {
+        height: 100%;
+        text-align: center;
+        background-color: variables.$primary-color;
+        border-radius: 12px;
+        transition: width 1s ease-in-out;
+      }
+    }
+  }
+
+  &-c {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      align-items: center;
+      justify-items: center;
+
+      img {
+        max-width: 140px;
+        max-height: 50px;
+        width: auto;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.6;
+        transition: all 0.3s ease;
+
+        &:hover {
+          filter: none;
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &-d {
+    .references {
+      p {
+        border: 1px solid variables.$medium-color;
+        border-radius: 8px;
+        padding: 1.2rem;
+        font-style: italic;
+        color: #444;
+        line-height: 1.6;
+        background-color: variables.$white-color;
+        min-height: 110px;
+        display: flex;
+        align-items: center;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        text-align: left;
+
+        li:last-child {
+          font-weight: 600;
+          font-size: 0.95rem;
+
+          small {
+            font-weight: 400;
+            color: #777;
+            display: block;
+          }
+        }
+      }
+
+      img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 0.9rem;
+        flex-shrink: 0;
+        border: 2px solid variables.$primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@use "variables";
+
+//main-nav
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+  }
+
+  &__logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+
+  &__items {
+    display: flex;
+
+    li {
+      padding: 1rem 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: variables.$mindark-color;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        border-bottom: 3px transparent solid;
+        padding: 0.5rem;
+        transition: border-color 0.4s ease, color 0.3s ease;
+
+        &:hover {
+          border-color: variables.$navbar-color;
+        }
+        &.active {
+          border-color: variables.$navbar-color;
+        }
+      }
+    }
+  }
+}
+
+#header {
+  &__home {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 100%), variables.$bg-image no-repeat center right / cover;
+    min-height: 100vh;
+    color: variables.$mindark-color;
+    display: flex;
+    flex-direction: column;
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .header-content {
+      text-align: center;
+      margin: auto;
+      max-width: 760px;
+      width: 100%;
+      padding: 3rem 2.5rem;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08), 0 3px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: variables.$mindark-color;
+      letter-spacing: -0.5px;
+      margin-bottom: 1.2rem;
+    }
+
+    .greeting {
+      display: block;
+      font-size: 3.4rem;
+      font-weight: 800;
+      color: #241414;
+    }
+
+    .typewrite {
+      display: inline-block;
+      margin-top: 0.4rem;
+      color: variables.$primary-color;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+
+      .wrap {
+        border-right: 0.1em solid variables.$primary-color !important;
+        padding-right: 4px;
+      }
+    }
+
+    .btn-light, .btn-primary {
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 0.85rem 2.4rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__inner {
+    background: variables.$bg-image no-repeat 40% 20% / cover;
+    min-height: 5.5rem;
+    border-bottom: 3px solid variables.$primary-color;
+
+    .main-nav {
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+    }
+  }
+}
