@@ -1,7 +1,7 @@
 {
   "name": "graphic-artist-portfolio",
   "version": "1.0.0",
-  "description": "Ao Tanaka — Graphic Artist, Printmaker & Visual Designer Portfolio Website",
+  "description": "Ta Onaka — Graphic Artist, Printmaker & Visual Designer Portfolio Website",
   "main": "public/index.html",
   "scripts": {
     "watch": "sass --watch --style=compressed scss:public/css",

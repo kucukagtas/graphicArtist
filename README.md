@@ -1,4 +1,4 @@
-# 🎨 Ao Tanaka — Graphic Artist, Printmaker & Visual Designer Portfolio
+# 🎨 Ta Onaka — Graphic Artist, Printmaker & Visual Designer Portfolio
 
 <div align="center">
 
@@ -21,7 +21,7 @@
 
 ## 📖 Overview
 
-**Ao Tanaka Portfolio** is an expressive, multi-page portfolio website tailored for an independent graphic designer, printmaker, and art director. The project balances the organic, tactile aesthetic of analog printmaking (woodcut, screenprint, risograph) with sleek digital layout precision.
+**Ta Onaka Portfolio** is an expressive, multi-page portfolio website tailored for an independent graphic designer, printmaker, and art director. The project balances the organic, tactile aesthetic of analog printmaking (woodcut, screenprint, risograph) with sleek digital layout precision.
 
 Engineered with a clean **Sass (SCSS)** architecture and structured static assets (`public/`), the project emphasizes fluid typography, interactive component states, accessible navigation, and optimized production stylesheets.
 
